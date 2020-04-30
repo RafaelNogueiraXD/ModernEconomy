@@ -1,0 +1,118 @@
+header{
+    @include centraliza();
+    width: 100%;
+    height: 130px;
+    padding-bottom: 20px;
+    // position: fixed;
+    div{
+        @include centraliza();
+        height: 100%;
+    }
+    .p1{
+        flex: 1;
+    }
+    .p2{
+        flex: 3;
+        font-size: 23px;
+        transition: all 40ms;
+        &:hover{
+            font-size: 26px;
+        }
+        ul li{
+            display: inline;
+            list-style-type:none;
+            margin-left:10px;
+            margin-right:10px;
+            padding: 10px;
+            a{
+                @include link();
+                color: grey;
+                &:hover{
+                    font-size: 29px;
+                    background: -webkit-linear-gradient(white, $primaria);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+    .p3{
+        flex: 1;
+    }
+}
+.separa{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: $primaria;
+        display: block;
+}
+.slogan{
+    margin-right: 20px;
+    margin-top: 15px;
+    transition: all 400ms ease;
+    @include imagem('img/icon.jpg',100px,90px);
+}
+footer{
+    background: #000000ff;
+    height: 300px;
+    padding-top: 5%;
+    color: white;
+    display: flex;
+    div{
+        &::before{
+            content: "";
+            width: 100%;
+            height: 2px;
+            display: block;
+            background: white;
+            margin-bottom: 3%;
+        }
+        flex: 1;
+        text-align: left;
+        h1{
+            color: #ccc0ffff;
+        }
+
+        ul li{
+            padding-left: 45%;
+            list-style-position: none;
+            list-style: none;
+            width: 600px;
+            a{
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+                &::before{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        background: $primaria;
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                }
+                &:hover{
+                    text-decoration: none;
+                    &::before{
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+
+                    }
+                    // &::after{
+                    //     margin-top: 0;
+                    //     content: "";
+                    //     width: 100%;
+                    //     height: 2px;
+                    //     background: $primaria;
+                    //     display: block;
+                        
+                    // }
+                }
+            }
+        }
+    }
+}

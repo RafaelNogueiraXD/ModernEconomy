@@ -1,0 +1,89 @@
+.cs{
+   height: 20vh;
+   width: 60%;
+   margin-left: 20%;
+   margin-right: 20%;
+   margin-top: 20%; 
+   margin-bottom: 10%; 
+   border-bottom: 5px solid $primaria;
+   border-right: 5px solid $primaria;
+    border-radius: 20px;
+    box-shadow: 1px 5px 5px #ff4700ff;
+    div{
+        display: flex;
+        height: 83%;
+        padding: 18px;
+        .a1{
+            flex: 4;
+            padding: 20px;
+            padding-top: 5%;
+            text-align: left;
+            // border: 2px solid $primaria;
+            ul{
+                position: relative;
+                margin: 0;
+                margin-left: 6%;
+                margin-top: -32px;
+                padding: 0;
+                display: flex;
+                li{
+                    position: relative;
+                    list-style: none;
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 30px;
+                    transform: rotate(-30deg) skew(25deg);
+                    background-color: #ccc;
+                    span{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: $primaria;
+                        transition: 0.5s;
+                        display: flex !important;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: 30px !important;
+                    }
+                    &:hover{
+                        span:nth-child(5){
+                            transform: translate(40px,-40px);
+                            opacity: 1;
+                        }
+                        span:nth-child(4){
+                            transform: translate(30px,-30px);
+                            opacity: .8;
+                        }
+                        span:nth-child(3){
+                            transform: translate(20px,-20px);
+                            opacity: .6;
+                        }
+                        span:nth-child(2){
+                            transform: translate(10px,-10px);
+                            opacity: .4;
+                        }
+                        span:nth-child(1){
+                            transform: translate(0,0);
+                            opacity: .2;
+                        }
+                    }
+                }
+            }
+        }
+        .a2{
+            @include centraliza();
+            flex:1;
+            border: 2px solid $primaria;
+            border-radius: 20px;
+                                                                          
+        }
+    }
+}
+.lado{
+    border-bottom: 5px solid $primaria;
+    border-right: 0px solid $primaria;
+    border-left: 5px solid $primaria;
+}
