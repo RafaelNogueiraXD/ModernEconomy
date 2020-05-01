@@ -752,6 +752,31 @@ nav div a:hover {
           justify-content: center;
 }
 
+.cadastro .formcad .botaocad input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  height: 60px;
+  border: none;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  padding-bottom: 5%;
+}
+
+.cadastro .formcad .botaocad input:hover {
+  background-color: #ff4700ff;
+  color: white;
+  cursor: pointer;
+}
+
 .cadastro div {
   margin-top: 10%;
   margin-bottom: 10%;

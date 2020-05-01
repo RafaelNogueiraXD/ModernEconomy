@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap");
+header {
+  position: fixed;
+}
+
+header.h {
+  background-color: #ff4700ff;
+  width: 100%;
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header.h .slogan {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header.h .slogan div {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+header.h .url {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  padding: 20px;
+}
+
+header.h .url h1 {
+  margin-left: 4%;
+  color: white;
+}
+
+header.v {
+  background-color: #ff4700ff;
+  width: 12%;
+  height: 100vh;
+}
+
+header.v .slogan {
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header.v a {
+  text-decoration: none;
+}
+
+header.v .lista div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+header.v .lista div .icone {
+  margin-left: 1%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 40px;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #ff4700ff;
+  color: white;
+}
+
+header.v .lista div .option {
+  color: white;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  font-size: 20px;
+}
+
+header.v .lista div:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.sair {
+  width: 100%;
+  margin-top: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  color: #ccc0cfff;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border: 0.5px solid rgba(128, 128, 128, 0.152);
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff4700ff), color-stop(#ff4700ff), to(#ffd000));
+  background: linear-gradient(to top, #ff4700ff, #ff4700ff, #ffd000);
+  border-radius: 20px;
+}
+
+.full header {
+  width: 12%;
+}
+
+.full section {
+  padding-top: 6%;
+  width: 70%;
+}
+
+.full section .titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30%;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+.full section .titulo h1 {
+  margin-top: 10%;
+  font-size: 35px;
+}
+
+.full section .conteudo {
+  padding-top: 7%;
+  margin-left: 30%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -17,36 +17,33 @@
     <div class="formcad">
         <h1>Cadastro</h1>
         <div class="cad">
-            <form action="" id="formcad">
+            <form action="../../app/log.php" method="POST">
                 <div>
                     <label for="nome">Nome:</label>
                 </div>
                 <div>
-                    <input type="text" id="nome" placeholder="Digite seu nome">
+                    <input type="text" id="nome" placeholder="Digite seu nome" maxlength="20" name="nome" required>
                 </div>
                 <div>
                     <label for="email">Email:</label>
                 </div>
                 <div>
-                    <input type="text" id="email" placeholder="Digite seu email">
+                    <input type="text" id="email" placeholder="Digite seu email" name="email" required>
                 </div>
                 <div>
                     <label for="senha">Senha:</label>
                 </div>
                 <div>
-                    <input type="text" id="senha" placeholder="Digite sua senha"> 
+                    <input type="text" id="senha" placeholder="Digite sua senha" name="senha" required> 
                 </div>
                 <div class="botaocad">
-                    <a href="" class="btn-efect">Cadastrar!</a>
+                    <input type="submit" class="btn-efect" value="cadastrar!">
                 </div>
             </form>
         </div>
     </div>
 </section>
 </main>
-<script>
-
-</script>
 <?php
     include "templates/footer.html";
 ?>

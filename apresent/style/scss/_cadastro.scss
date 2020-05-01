@@ -38,6 +38,7 @@
             -webkit-text-stroke-color: $primaria;
             color: white;
         }
+
         input{
             width: 100%;
             border: 2px solid $primaria;
@@ -57,10 +58,25 @@
                 outline: 0px;
             }
         }
+        
         .botaocad{
             display: flex;
             width: 100%;
             @include centraliza();
+            input{
+                @include centraliza();
+                width: 150px;
+                height: 60px;
+                border: none;
+                padding: 20px;
+                background-color: rgba(0,0,0,0.0);
+                padding-bottom: 5%;
+                &:hover{
+                        background-color: $primaria;
+                        color: white;
+                        cursor: pointer;
+                }
+            }
         }
     }
     div{
