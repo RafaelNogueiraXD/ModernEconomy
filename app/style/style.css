@@ -34,14 +34,51 @@ header.h .slogan div {
 }
 
 header.h .url {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
   padding: 20px;
 }
 
 header.h .url h1 {
   margin-left: 4%;
+  color: white;
+}
+
+header.h #mode {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header.h #mode button {
+  border: 0 solid black;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+header.h #mode button:focus {
+  outline: 0px;
+}
+
+header.h #mode #dark {
+  background-color: #1a001a;
+}
+
+header.h #mode #light {
+  background-color: #ff4700ff;
   color: white;
 }
 
@@ -92,8 +129,6 @@ header.v .lista div .icone {
       -ms-flex: 1;
           flex: 1;
   font-size: 40px;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #ff4700ff;
   color: white;
 }
 
@@ -109,6 +144,11 @@ header.v .lista div:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+header.v .lista div:hover .icone {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #ff4700ff;
+}
+
 .sair {
   width: 100%;
   margin-top: 70%;
@@ -119,6 +159,11 @@ header.v .lista div:hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.sair:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: red;
 }
 
 body {

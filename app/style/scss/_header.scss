@@ -17,10 +17,33 @@ header.h{
             }
         }
         .url{
-            flex: 5;
+            flex: 6;
             padding: 20px;
             h1{
                 margin-left: 4%;
+                color: white;
+            }
+        }
+        #mode{
+            flex: 1;
+            display: flex;
+            @include centraliza();
+
+            button{
+                border: 0 solid black;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 5px;
+                &:focus{
+
+                    outline: 0px;
+                }   
+            }
+            #dark{
+                background-color: #1a001a;
+            }
+            #light{
+                background-color: $primaria;
                 color: white;
             }
         }
@@ -47,8 +70,6 @@ header.v{
                 margin-left: 1%;
                 flex: 1;
                 font-size: 40px;
-                -webkit-text-stroke-width: 3px;
-                -webkit-text-stroke-color: $primaria;
                 color: white;
             }
             .option{
@@ -59,6 +80,10 @@ header.v{
             }
             &:hover{
                 background-color: rgba(0,0,0,0.3);
+                .icone{
+                    -webkit-text-stroke-width: 3px;
+                    -webkit-text-stroke-color: $primaria;
+                }
 
             }
         }
@@ -70,5 +95,9 @@ header.v{
     display: flex;
     justify-items: end;
     align-items: flex-end;
+    &:hover{
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: red;
+    }
 
 }
