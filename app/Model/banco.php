@@ -1,13 +1,14 @@
 <?php
+include "../classes/conection.php";
 
-class banco extends conection {
+class crud extends banco {
 
     #atributos
-    private $crud;
-    private $contador;
+    protected $crud;
+    protected $contador;
 
     #Preparacao das declativas
-    private function PS($Query , $Parametros)
+    public function PS($Query , $Parametros)
     {
         $this->countParametros($Parametros);
         $this->crud= $this->conecta() -> prepare($Query);
@@ -22,7 +23,7 @@ class banco extends conection {
     }
 
     #Contador de Parametros
-    private function countParametros($Parametros)
+    public function countParametros($Parametros)
     {
         $this->contador = count($Parametros);
     }

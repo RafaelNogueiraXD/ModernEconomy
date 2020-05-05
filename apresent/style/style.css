@@ -264,6 +264,8 @@ footer div ul li a:hover::before {
   width: 600px;
   height: 75%;
   margin-left: 10%;
+  -webkit-box-shadow: 7px 7px 10px black;
+          box-shadow: 7px 7px 10px black;
 }
 
 .ch2 div {

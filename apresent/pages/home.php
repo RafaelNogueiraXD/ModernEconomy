@@ -24,8 +24,8 @@
         <h1>IMAGEM</h1>
     </div>
     <div class="anime">
-        <h1>Como Posso usar o Sistema?</h1>
-        <p>Para utilizar o sistema basta criar uma conta, que logo será redirecionado para página inicial onde voce pode já criar suas contas!</p>
+        <h1>Quantas funções o sistema possui?</h1>
+        <p>Atualmente o sistema possui 9 partes que cada uma irá lher auxiliar de uma forma, a equipe ja está trabalhando em mais 3 partes!</p>
     </div>
 </section>
 <section class="ch4 animate">   

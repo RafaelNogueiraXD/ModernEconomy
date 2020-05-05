@@ -21,6 +21,7 @@
     .imagem{
         @include imagem("img/dinovu.png",600px,75%);
         margin-left: 10%;
+        box-shadow: 7px 7px 10px black;
     }
     div{
         margin-top: 0%;

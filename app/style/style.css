@@ -1,4 +1,104 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap");
+.btn {
+  text-decoration: none;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ff4700ff;
+  border-radius: 10px;
+  color: #ff4700ff;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #ff4700ff;
+}
+
+.btn-efect {
+  text-decoration: none;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  color: #ff4700ff;
+}
+
+.btn-efect:hover {
+  color: white;
+  background-color: #ff4700ff;
+  -webkit-box-shadow: 0 0 10px #ff4700ff, 0 0 40px #ff4700ff, 0 0 80px #ff4700ff;
+          box-shadow: 0 0 10px #ff4700ff, 0 0 40px #ff4700ff, 0 0 80px #ff4700ff;
+}
+
+.tmodern {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #ff4700ff;
+  color: #aba4ad;
+}
+
+table {
+  width: 140%;
+  border: 1 solid grey;
+  border-collapse: collapse;
+}
+
+table thead tr:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+table th {
+  border-bottom: 1px solid #ff4700ff;
+  width: 500px;
+  font-size: 25px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #ff4700ff;
+  color: white;
+}
+
+table tr {
+  width: 500px;
+}
+
+table tr .md {
+  border-left: 1px solid #ff4700ff;
+  border-right: 1px solid #ff4700ff;
+}
+
+table tr td {
+  padding: 40px;
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 header {
   position: fixed;
 }
@@ -172,12 +272,16 @@ body {
 }
 
 * {
-  color: #ccc0cfff;
+  color: #aba4ad;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Baloo Thambi 2', cursive;
+  -moz-user-select: rgba(255, 72, 0, 0.329);
+       user-select: rgba(255, 72, 0, 0.329);
+  -webkit-user-select: rgba(255, 72, 0, 0.329);
+  -ms-user-select: rgba(255, 72, 0, 0.329);
 }
 
 ::-webkit-scrollbar {

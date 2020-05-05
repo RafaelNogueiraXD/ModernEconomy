@@ -1,7 +1,8 @@
 $primaria:#ff4700ff;
-$secundaria:#ccc0cfff;
+$secundaria:rgb(171, 164, 173);
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap');
 @import "scss/functions";
+@import "scss/objetos";
 @import "scss/header";
 body{
     width: 100%;
@@ -13,11 +14,13 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Baloo Thambi 2', cursive;
+    user-select: rgba(255, 72, 0, 0.329);
+    -webkit-user-select: rgba(255, 72, 0, 0.329); 
+    -ms-user-select:rgba(255, 72, 0, 0.329); 
 }
 
-
-
-  ::-webkit-scrollbar{
+//Barra vertical!!!!!
+::-webkit-scrollbar{
     width: 10px;
 }
 ::-webkit-scrollbar-track{
@@ -27,7 +30,7 @@ body{
     background: linear-gradient(to top, $primaria, $primaria,rgb(255, 208, 0));
     border-radius: 20px;
 }
-
+// posicionamento do conteudo nas telas
 .full{
     header{
         width: 12%;

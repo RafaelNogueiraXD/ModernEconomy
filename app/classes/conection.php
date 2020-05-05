@@ -1,9 +1,10 @@
 <?php
-abstract class conection
+class banco
 {
-    public function conection(){
+    public function conecta(){
         try{
-            $Banco = new PDO("mysql:host=localhost;dbname=moderneconomy","root","");
+            $Banco = new PDO("mysql:host=localhost;dbname=moderneconomy",
+            "root","");
             return $Banco;
         }catch (PDOException $Erro){
             return $Erro->getMessage();
