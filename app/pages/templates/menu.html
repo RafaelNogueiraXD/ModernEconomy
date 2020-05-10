@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../js/jquery.js"></script>
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="../../js/jquery.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header class="h">
         <div class="slogan">
+            <div>
+                <h1>SLOGAN</h1>
+            </div>
 
         </div>
         <div class="url">
             <p>Endereco:</p>
-            <h1>URL</h1>
+            <h1 id="urlt">URL</h1>
         </div>
         <div id="mode">
                 <button id="dark">dark mode</button>
@@ -82,33 +85,6 @@
                 </a>
             </div>
         </header>
-        <section>
-            <div class="titulo">
-                <h1>Mostrando usuario e suas contas</h1>
-            </div>
-            <div class="conteudo">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="in">Id</th>
-                            <th class="md">Nome</th>
-                            <th class="md">Conta</th>
-                            <th class="final">Investido</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>          
-                            <td>1</td>
-                            <td>TV</td>
-                            <td>Eletronicos</td>
-                            <td>R$ 3000,00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
-        </section>
     </div>
 
 <script>
@@ -116,9 +92,9 @@
 
     $("#dark").click(function(){
         setTimeout(function(){
-            $("header.v").css("background-color","#1a001a"),
-            $("header.h").css("background-color","#1a001a"),
-            $("body").css("background-color","#404040"),
+            $("header.v").css("background-color","#262626"),
+            $("header.h").css("background-color","#262626"),
+            $("body").css("background-color","#1a1a1a"),
             $("#dark").hide(),
             $("#light").fadeToggle(500)
         })

@@ -785,6 +785,100 @@ nav div a:hover {
   margin: 2%;
 }
 
+.conteudoLogin {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.conteudoLogin div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+}
+
+.conteudoLogin .sloganlogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.conteudoLogin .login {
+  margin-top: 10%;
+  padding: 40px;
+  display: inline;
+}
+
+.conteudoLogin .login .formlog {
+  display: block;
+}
+
+.conteudoLogin .login .formlog input {
+  margin-left: 30%;
+  width: 40%;
+  padding: 10px;
+  background: none;
+  border: none;
+  margin-top: 20px;
+  font-size: 15px;
+  border-bottom: 1px #ff4700ff solid;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  color: #414040;
+}
+
+.conteudoLogin .login .formlog input:hover {
+  height: 50px;
+  font-size: 18px;
+}
+
+.conteudoLogin .login .formlog input:focus {
+  outline: none;
+  font-size: 18px;
+}
+
+.conteudoLogin .login .formlog .botaolog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10%;
+}
+
+.conteudoLogin .login .formlog .botaolog input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  height: 60px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+}
+
+.conteudoLogin .login .formlog .botaolog input:hover {
+  background-color: #ff4700ff;
+  color: white;
+  padding-bottom: 6%;
+  cursor: pointer;
+}
+
 h1 {
   display: -webkit-box;
   display: -ms-flexbox;

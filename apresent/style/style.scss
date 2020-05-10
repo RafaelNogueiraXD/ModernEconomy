@@ -19,6 +19,8 @@ body{
 @import "scss/objetos";
 @import "scss/sobre";
 @import "scss/cadastro";
+@import "scss/login";
+
 
 h1{
     @include centraliza();

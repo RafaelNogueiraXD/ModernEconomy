@@ -1,6 +1,8 @@
 <?php
-include "menu.html";
-include "../Model/usuario.php";
+include "../templates/menu.html";
+require_once "../../Model/usuario.php";
+
+$usu = new usuario();
 ?>
 <div class="full">
 <section>
@@ -16,14 +18,13 @@ include "../Model/usuario.php";
                             <th>Investido</th>
             </thead>
             <?php
-                $banco = new usuario();
-                foreach ($banco->usuconta() as $row) {
+                foreach ($usu->usuconta() as $row) {
             ?>
             <tr>
                     <td><?= $row['id']?></td>
                     <td><?= $row['nome']?></td>
-                    <td><?= $row['ic']?></td>
-                    <td><?= $row['nc']?></td>
+                    <td><?= $row['email']?></td>
+                    <td><a class="btn-efect" href="">Ver</a> </td>
             </tr>
             <?php
             }

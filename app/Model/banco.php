@@ -1,5 +1,5 @@
 <?php
-include "../classes/conection.php";
+require_once "../../classes/conection.php";
 
 class crud extends banco {
 
