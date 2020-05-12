@@ -1,38 +1,52 @@
 <?php
 include "../templates/menu.html";
 require_once "../../Model/usuario.php";
-
+session_start();
+$id = $_SESSION['id'];
 $usu = new usuario();
+$dados = $usu->usuconta($id);
 ?>
 <div class="full">
 <section>
     <div class="titulo">
-        <h1>Usuários cadastrados</h1>
+        <h1>Olá <?=  $dados['nome'] ?></h1>
     </div>
     <div class="conteudo">
-        <table>
-            <thead>
-                <th>ID</th>
-                <th class="md">Nome</th>
-                <th class="md">Conta</th>
-                            <th>Investido</th>
-            </thead>
-            <?php
-                foreach ($usu->usuconta() as $row) {
-            ?>
-            <tr>
-                    <td><?= $row['id']?></td>
-                    <td><?= $row['nome']?></td>
-                    <td><?= $row['email']?></td>
-                    <td><a class="btn-efect" href="">Ver</a> </td>
-            </tr>
-            <?php
-            }
-            ?>
-        </table>
+        <div class="dados">
+            <ul>
+                <li><b>Nome:</b> <?=  $dados['nome'] ?></li>
+                <li><b>Email:</b> <?=  $dados['email'] ?></li>
+                <li><b>Cep:</b> <?php
+                                        if($dados['Cep'] == 0)
+                                        {
+                                            echo "Não informado";
+                                        } 
+                                ?>
+                </li>
+                <li><b>Data de Nascimento:</b>  <?php
+                                        if($dados['data_nasc'] == "0000-00-00")
+                                        {
+                                            echo "Não informado";
+                                        } 
+                                ?>
+                </li>
+            </ul>
+            <fieldset>
+                <legend><b>Descrição</b></legend>
+                <?=  $dados['description'] ?>
+            </fieldset>
+            <div class="options">
+            <div class="d1">
+                <a href="" class="btn">Editar</a>
+            </div>
+            <div class="d2">
+                <a href="" class="btn-efect">Deletar</a>
+            </div>
+        </div>
+        </div>
     </div>
 </section>
 <script>
-    $("#urlt").html("Conta  > Objetivos");
+    titulo("Perfil","Perfil");
 </script>
 </div>

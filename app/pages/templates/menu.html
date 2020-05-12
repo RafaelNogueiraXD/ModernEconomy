@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/style.css">
     <script src="../../js/jquery.js"></script>
-    <title>Document</title>
+    <title id="title">Document</title>
 </head>
 <body>
     <header class="h">
@@ -36,7 +36,7 @@
                         <p class="option">Tela inicial</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="../usuario/perfil.php">
                     <div>
                         <p class="icone">I</p>
                         <p class="option">Perfil</p>
@@ -78,7 +78,7 @@
                         <p class="option">Assinatura</p>
                     </div>
                 </a>
-                <a href="" >
+                <a href="../sair/sair.php">
                     <div class="sair">
                         Sair
                     </div>
@@ -86,7 +86,7 @@
             </div>
         </header>
     </div>
-
+<script src="../../js/main.js"></script>
 <script>
     $("#light").hide();
 
@@ -94,6 +94,7 @@
         setTimeout(function(){
             $("header.v").css("background-color","#262626"),
             $("header.h").css("background-color","#262626"),
+            $("b").css("color","white"),
             $("body").css("background-color","#1a1a1a"),
             $("#dark").hide(),
             $("#light").fadeToggle(500)
@@ -102,6 +103,7 @@
     $("#light").click(function(){
         $("header.v").css("background-color","#ff4700ff"),
         $("header.h").css("background-color","#ff4700ff"),
+        $("b").css("color","black"),
         $("body").css("background-color","white"),
         $("#dark").fadeToggle(500),
         $("#light").hide()

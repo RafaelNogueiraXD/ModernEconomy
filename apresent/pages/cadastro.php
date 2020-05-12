@@ -17,7 +17,7 @@
     <div class="formcad">
         <h1>Cadastro</h1>
         <div class="cad">
-            <form action="../../app/log.php" method="POST">
+            <form action="../../app/pages/usuario/index.php" method="POST">
                 <div>
                     <label for="nome">Nome:</label>
                 </div>
