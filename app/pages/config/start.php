@@ -4,7 +4,7 @@ require_once "../../Model/usuario.php";
 require_once "../../Model/banco.php";
 $db = new usuario();
 session_start();
-    $dados = $db->Email($_SESSION['email']);
+    $dados = $db->Email($_SESSION['email'])->fetch(PDO::FETCH_ASSOC);
     $_SESSION['id'] = $dados['password'];
 
 ?>
@@ -21,5 +21,5 @@ session_start();
 </div>
 
 <script>
-    titulo("Configurando","Configurando sua conta... - Etapa 1 de 3");
+    titulo("Configurando","Configurando sua conta...");
 </script>

@@ -1,24 +1,28 @@
 <?php
     require_once "../../Model/usuario.php";
-    require_once "../../Model/banco.php";
-    $db = new crud();
+    $usuario = new usuario();
     // login
     if(isset($_POST['emaillog'],$_POST['senhalog']))
     {
         $email = $_POST['emaillog'];
         $senha = $_POST['senhalog'];
-        $dados = $db->select("*","usuario","where email='$email' and password='$senha' ",array());
-        print_r($dados);
+        $dados = $usuario->login($email,$senha);
         if($dados->rowCount() > 0)
         {
-            echo "<hr>tem um usuario com essas caracteristicas";
-            //echo "olá".$dados['nome'];
             foreach($dados as $row){
                 session_start();
                 $id = $row['id'];
                 $_SESSION['id'] = $id;
                 $_SESSION['email'] = $row['email'];
                 header("Location: perfil.php");
+                
+                $row = $usuario->ContaPrincipal($id);
+                if($row > 0)
+                {
+                    header("Location: perfil.php");
+                }else{
+                    header("Location: ../config/start.php");
+                }
             }
             
         }else{
@@ -29,13 +33,13 @@
     if(isset($_POST['nome'],$_POST['email'],$_POST['senha']))
     {
         $array =[$_POST['nome'] ,$_POST['email'], $_POST['senha']];  
-        $dados = $db->select("*","usuario","where email='$array[1]'",array());
+        $dados = $usuario->Email($array[2]);
 
        if($dados->rowCount() > 0)
         {
             header("Location: ../../../apresent/pages/cadastro.php");        
         }else{
-            $a = $db->insert("usuario","default,'$array[0]','$array[1]','0','','0','$array[2]','Não informado'",array());
+            $a = $usuario->insere($array[0],$array[1],$array[2]);
             session_start();
             $_SESSION['email'] = $array[1];
             header("Location: ../config/start.php");

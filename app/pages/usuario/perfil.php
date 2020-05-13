@@ -17,9 +17,11 @@ $dados = $usu->usuconta($id);
                 <li><b>Nome:</b> <?=  $dados['nome'] ?></li>
                 <li><b>Email:</b> <?=  $dados['email'] ?></li>
                 <li><b>Cep:</b> <?php
-                                        if($dados['Cep'] == 0)
+                                        if($dados['Cep'] == 0 || $dados['Cep'] == "")
                                         {
                                             echo "Não informado";
+                                        }else{
+                                            echo $dados['Cep'];
                                         } 
                                 ?>
                 </li>
@@ -27,6 +29,8 @@ $dados = $usu->usuconta($id);
                                         if($dados['data_nasc'] == "0000-00-00")
                                         {
                                             echo "Não informado";
+                                        }else{
+                                            echo $dados['data_nasc'];
                                         } 
                                 ?>
                 </li>
