@@ -1,5 +1,7 @@
 <?php
+    require_once "../../Model/conta.php";
     require_once "../../Model/usuario.php";
+    $conta = new conta();
     $usuario = new usuario();
     // login
     if(isset($_POST['emaillog'],$_POST['senhalog']))
@@ -14,12 +16,14 @@
                 $id = $row['id'];
                 $_SESSION['id'] = $id;
                 $_SESSION['email'] = $row['email'];
-                header("Location: perfil.php");
                 
-                $row = $usuario->ContaPrincipal($id);
+                $query = $conta->Contax($id);
+                $row = $query->rowCount();
+                $ar = $query->fetch(PDO::FETCH_ASSOC);
                 if($row > 0)
                 {
                     header("Location: perfil.php");
+
                 }else{
                     header("Location: ../config/start.php");
                 }

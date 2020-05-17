@@ -1,43 +1,38 @@
 <?php
-include "../templates/menu.html";
-require_once "../../Model/usuario.php";
-session_start();
-$id = $_SESSION['id'];
-$usu = new usuario();
-$dados = $usu->usuconta($id);
+include "../templates/menu.php";
 ?>
 <div class="full">
 <section>
     <div class="titulo">
-        <h1>Olá <?=  $dados['nome'] ?></h1>
+        <h1>Olá <?=  $usu['nome'] ?></h1>
     </div>
     <div class="conteudo">
         <div class="dados">
             <ul>
-                <li><b>Nome:</b> <?=  $dados['nome'] ?></li>
-                <li><b>Email:</b> <?=  $dados['email'] ?></li>
+                <li><b>Nome:</b> <?=  $usu['nome'] ?></li>
+                <li><b>Email:</b> <?=  $usu['email'] ?></li>
                 <li><b>Cep:</b> <?php
-                                        if($dados['Cep'] == 0 || $dados['Cep'] == "")
+                                        if($usu['Cep'] == 0 || $usu['Cep'] == "")
                                         {
                                             echo "Não informado";
                                         }else{
-                                            echo $dados['Cep'];
+                                            echo $usu['Cep'];
                                         } 
                                 ?>
                 </li>
                 <li><b>Data de Nascimento:</b>  <?php
-                                        if($dados['data_nasc'] == "0000-00-00")
+                                        if($usu['data_nasc'] == "0000-00-00")
                                         {
                                             echo "Não informado";
                                         }else{
-                                            echo $dados['data_nasc'];
+                                            echo $usu['data_nasc'];
                                         } 
                                 ?>
                 </li>
             </ul>
             <fieldset>
                 <legend><b>Descrição</b></legend>
-                <?=  $dados['description'] ?>
+                <?=  $usu['description'] ?>
             </fieldset>
             <div class="options">
             <div class="d1">

@@ -20,17 +20,17 @@ class usuario extends crud{
         return $result;
     }
 
-    public function ContaPrincipal($id){
-        $result = crud::select("u.nome,c.nome"," 
-                                    usuario as u 
-                                    inner join conta c 
-                                    inner join relaciona r 
-                                    on $id = r.idconta ","
-                                    where c.nome='Principal';
-                                ",array());
-        $result = $result->rowCount();
-        return $result;
-    }
+    // public function ContaPrincipal($id){
+    //     $result = crud::select("u.nome,c.nome"," 
+    //                                 usuario as u 
+    //                                 inner join conta c 
+    //                                 inner join relaciona r 
+    //                                 on $id = r.idconta ","
+    //                                 where c.nome='Principal';
+    //                             ",array());
+    //     $result = $result->rowCount();
+    //     return $result;
+    // }
     public function login($email,$senha)
     {
         $dados = crud::select("*","usuario","where email='$email' and password='$senha' ",array());

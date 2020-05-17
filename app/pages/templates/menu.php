@@ -7,6 +7,19 @@
     <script src="../../js/jquery.js"></script>
     <title id="title">Document</title>
 </head>
+<?php
+    require_once "../../Model/usuario.php";
+    $usuario = new usuario();
+    session_start();
+    if(isset($_SESSION['email']))
+    {
+       $usu =  $usuario->Email($_SESSION['email'])->fetch(PDO::FETCH_ASSOC);
+    }
+    if(isset($_SESSION['id']))
+    {
+       $usu =  $usuario->Email($_SESSION['id'])->fetch(PDO::FETCH_ASSOC);
+    }
+?>
 <body>
     <header class="h">
         <div class="slogan">
