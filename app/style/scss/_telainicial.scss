@@ -6,6 +6,58 @@
     .cc2{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+    }
+}
+.filtro{
+    display: grid;
+    // border: 1px solid black;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100px;
+
+    .btnFiltrar{
+        grid-column: 1fr;
+        a{
+            width: 200px;
+        }
+    }
+    .filtros{
+        display: flex;
+        @include centraliza();
+        input{
+            background: transparent;
+            border: none;
+            &:focus{
+                outline: none;
+            }
+        }
+        input[type=text]{
+            border: 1px solid $primaria;
+            // border-radius: 5px;
+            border-right: none;
+            width: 400px;
+            margin: 0;
+            height: 40px;
+            padding: 10px;
+        }
+        input[type=submit]{
+            margin: 0;
+            left: 0;
+            height: 40px;
+            padding: 5px;
+            margin-left: -3px;
+            border: 1px solid $primaria;
+            // border-radius: 5px;
+            border-left:none;
+            transition: all 400ms;
+            &:hover{
+                background-color: $primaria;
+                opacity: 0.6;
+            }
+        }
+    }
+    .add{
+        width: 150px;
     }
 }
 .conta{

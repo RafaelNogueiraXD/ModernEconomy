@@ -325,6 +325,77 @@ header.v .lista div:hover .icone {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.filtro {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr 1fr;
+      grid-template-columns: 1fr 4fr 1fr;
+  height: 100px;
+}
+
+.filtro .btnFiltrar {
+  -ms-grid-column: 1;
+  grid-column: 1fr;
+}
+
+.filtro .btnFiltrar a {
+  width: 200px;
+}
+
+.filtro .filtros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filtro .filtros input {
+  background: transparent;
+  border: none;
+}
+
+.filtro .filtros input:focus {
+  outline: none;
+}
+
+.filtro .filtros input[type=text] {
+  border: 1px solid #ff4700ff;
+  border-right: none;
+  width: 400px;
+  margin: 0;
+  height: 40px;
+  padding: 10px;
+}
+
+.filtro .filtros input[type=submit] {
+  margin: 0;
+  left: 0;
+  height: 40px;
+  padding: 5px;
+  margin-left: -3px;
+  border: 1px solid #ff4700ff;
+  border-left: none;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.filtro .filtros input[type=submit]:hover {
+  background-color: #ff4700ff;
+  opacity: 0.6;
+}
+
+.filtro .add {
+  width: 150px;
 }
 
 .conta {
@@ -541,7 +612,6 @@ body {
   border: 1px solid #ff4700ff;
   border-radius: 10px;
   width: 140ch;
-  height: 65vh;
 }
 
 .dados ul li {
@@ -602,17 +672,21 @@ div.options div a {
   margin-left: 30%;
 }
 
+.espaco {
+  width: 100%;
+  background: transparent;
+  height: 10vh;
+}
+
 @media screen and (max-width: 1700px) {
   .dados {
     width: 130ch;
-    height: 65vh;
   }
 }
 
 @media screen and (max-width: 1500px) {
   .dados {
     width: 110ch;
-    height: 65vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -65,7 +65,7 @@ body{
     border:  1px solid $primaria;
     border-radius: 10px;
     width: 140ch;
-    height: 65vh;
+    // height: 65vh;
     ul li {
         margin: 20px;
         margin-top: 30px;
@@ -108,15 +108,21 @@ div.options{
         }
     }
 }
+.espaco{
+    // border: 1px solid black;
+    width: 100%;
+    background: transparent;
+    height: 10vh;
+}
 @media screen and (max-width: 1700px) {
     .dados{
         width: 130ch;
-        height: 65vh;
+        // height: 65vh;
     }
 }
 @media screen and (max-width: 1500px) {
     .dados{
         width: 110ch;
-        height: 65vh;
+        // height: 65vh;
     }
 }

@@ -2,8 +2,10 @@
     include "../../Model/conta.php";
     include "../templates/menu.php";
     $conta = new conta();
-    $ContaPrincipal = $conta->Contax($usu['id'])->fetch(PDO::FETCH_ASSOC);
+    $ContaPrincipal = $conta->ContaPrincipal($usu['id'])->fetch(PDO::FETCH_ASSOC);
     $num = $conta->Nums($ContaPrincipal['id']);
+    $contas = $conta->Contax($usu['id']);
+
 ?>
 
 <div class="full">
@@ -13,7 +15,16 @@
     </div>
     <div class="conteudo">
         <div class="conteudoConta">
-
+            <div class="filtro">
+               <div class="btnFiltrar">
+                    
+               </div>
+               <div class="filtros">
+               </div>
+               <div class="add">
+                        <a href="" class="btn-efect">Adicionar</a>
+               </div>
+            </div>
             <div class="cc2">
 
                 <div class="conta">
@@ -32,22 +43,35 @@
                     </div>
                 </div>
 
-              
-                <!-- <div class="conta">
+              <?php
+                while($linha = $contas->fetch(PDO::FETCH_ASSOC)){
+                  if($linha['Nome'] == 'Principal'){
+
+                  }else{
+                    $num = $conta->Nums($linha['id']);
+                
+              ?>
+                <div class="conta">
                     <div class="NomeConta">
-                        <h1>Conta </h1>
+                        <h1><?= $linha["Nome"] ?> </h1>
                     </div>
                     <div class="descConta">
                         <ul>   
-                            <li><b>Nome:</b> Conta Principal</li>
-                            <li><b>Listas:</b>  <?= $num['listas'] ?> Listas</li>
-                            <li><b>Objetivos:</b> <?= $num['objetivos'] ?> Objetivo</li>
+                            <li><b>Nome:</b> <?= $linha["Nome"] ?>  </li>
+                            <li><b>Listas:</b> <?= $num['listas'] ?>  Listas</li>
+                            <li><b>Objetivos:</b>  <?= $num['objetivos'] ?> Objetivo</li>
                         </ul>
                     </div>
                     <div class="entraConta">
                         <a href="" class="btn">Entrar!</a>
                     </div>
-                </div> -->
+                </div>
+
+                <?php
+                    }
+                }
+                
+                ?>
 
                 <div class="conta">
                     <div class="NomeConta">
