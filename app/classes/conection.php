@@ -1,7 +1,7 @@
 <?php
-class banco
+abstract class banco
 {
-    public function conecta(){
+    protected function conecta(){
         try{
             $Banco = new PDO("mysql:host=localhost;dbname=moderneconomy",
             "root","");

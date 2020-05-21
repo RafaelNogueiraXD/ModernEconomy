@@ -40,6 +40,12 @@ class usuario extends crud{
         $a = crud::insert("usuario","default,'$dado1','$dado2','0','','0','$dado3','Não informado'",array());
         return $a;
     }
+    public function script($id){
+        echo "  <script>
+                    var id =".$color."
+                </script>";
+    }
+
 }
 
 

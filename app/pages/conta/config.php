@@ -21,7 +21,7 @@ if(isset($_POST["saldo"])){
                     echo $rows;
                 }
                 ?>
-                <form action="start.php" method="POST">
+                <form action="config.php" method="POST">
                 <div class="label">
                     <label for="saldo">Seu saldo Inicial: <i>I</i></label>
                 </div>

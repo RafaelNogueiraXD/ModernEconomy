@@ -25,7 +25,7 @@
                     header("Location: perfil.php");
 
                 }else{
-                    header("Location: ../config/start.php");
+                    header("Location: ../conta/config.php");
                 }
             }
             
@@ -46,7 +46,7 @@
             $a = $usuario->insere($array[0],$array[1],$array[2]);
             session_start();
             $_SESSION['email'] = $array[1];
-            header("Location: ../config/start.php");
+            header("Location: ../conta/config.php");
         }
     }
 ?>

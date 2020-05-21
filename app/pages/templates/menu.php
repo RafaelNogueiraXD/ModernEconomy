@@ -19,6 +19,13 @@
     {
        $usu =  $usuario->Email($_SESSION['id'])->fetch(PDO::FETCH_ASSOC);
     }
+    echo "<script>
+            var cor =".$usu['cor']." 
+         </script>";
+    echo "<script>
+            var idu =".$usu['id']." 
+         </script>";
+
 ?>
 <body>
     <header class="h">
@@ -33,8 +40,18 @@
             <h1 id="urlt">URL</h1>
         </div>
         <div id="mode">
-                <button id="dark">dark mode</button>
-                <button id="light">Light mode</button>
+                <!-- <button id="dark">dark mode</button>
+                <button id="light">Light mode</button> -->
+                <ul class="menu">
+                    <li><a href="#">Options</a>
+                        <ul>
+                            <li><a href="../usuario/perfil.php">Perfil</a></li>
+                            <li><a href="#" id="dark">Dark Mode (BETA)</a></li>
+                            <li><a href="#" id="light">Light Mode (BETA)</a></li>
+                            <li><a href="../sair/sair.php">Sair</a></li>                                     
+                        </ul>
+                    </li>     
+                </ul>
         </div>
     </header>
     <div class="full">
@@ -43,7 +60,7 @@
                     <h1>SLOGAN</h1>
             </div>
             <div class="lista">
-                <a href="">
+                <a href="../conta/TelaInicial.php">
                     <div>
                         <p class="icone">I</p>
                         <p class="option">Tela inicial</p>
@@ -91,36 +108,11 @@
                         <p class="option">Assinatura</p>
                     </div>
                 </a>
-                <a href="../sair/sair.php">
-                    <div class="sair">
-                        Sair
-                    </div>
-                </a>
             </div>
         </header>
     </div>
 <script src="../../js/main.js"></script>
 <script>
-    $("#light").hide();
-
-    $("#dark").click(function(){
-        setTimeout(function(){
-            $("header.v").css("background-color","#262626"),
-            $("header.h").css("background-color","#262626"),
-            $("b").css("color","white"),
-            $("body").css("background-color","#1a1a1a"),
-            $("#dark").hide(),
-            $("#light").fadeToggle(500)
-        })
-    });
-    $("#light").click(function(){
-        $("header.v").css("background-color","#ff4700ff"),
-        $("header.h").css("background-color","#ff4700ff"),
-        $("b").css("color","black"),
-        $("body").css("background-color","white"),
-        $("#dark").fadeToggle(500),
-        $("#light").hide()
-    });
 </script>
 </body>
 </html>

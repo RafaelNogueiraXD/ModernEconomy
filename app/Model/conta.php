@@ -19,29 +19,33 @@ class conta extends crud{
     }
 
     public function Contax($id){
-        $result = crud::select("*","conta"," WHERE criador=$id and nome='principal'",array());                                             
+        $result = crud::select("*","conta"," WHERE criador=$id",array());                                             
         return $result;
     }
 
     public function ContaPrincipal($id){
-        $result = crud::select("*"," 
-                                from relaciona as r 
-                                inner join conta c on c.id = r.idconta
-                                inner join usuario u on r.idUsuario = u.id","
-                                where c.nome='Principal' and c.criador = $id;
-                                ",array());
+        $result = crud::select("*","conta"," WHERE criador=$id and nome='principal'",array());                                             
         return $result;
     }
-    public function login($email,$senha)
+    
+    public function Nums($idconta)
     {
-        $dados = crud::select("*","conta","where email='$email' and password='$senha' ",array());
-        return $dados;
+        $listas = crud::select("*","lista l inner join conta c on c.id=l.idconta",
+                                "where c.id = $idconta",array())->rowCount();
+
+        $objetivos = crud::select("*","objetivo o inner join conta c on c.id=o.idconta",
+                                "where c.id = $idconta",array())->rowCount();
+        $num = array('listas' => $listas, 'objetivos' => $objetivos);
+        return $num;
     }
+
+
     public function insere($dado1,$dado2,$dado3){
         $a = crud::insert("conta","default,'$dado1','$dado2','0','','0','$dado3','Não informado'",array());
         return $a;
     }
 }
+
 
 
 ?>

@@ -1,0 +1,45 @@
+.conteudoConta{
+    display: block;
+    width: 150%;
+    // border: 2px solid #ff4700ff;
+    // height: 100vh;
+    .cc2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.conta{
+    display: grid;
+    grid-column: 1fr;
+    margin: 5%;
+    margin-left: 12%;
+    width: 50%;
+    border: 2px solid #ff4700ff;
+    height: 43vh;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 200ms;
+    .entraConta{
+        margin-top: 10% ;
+        @include centraliza();
+    }
+    .descConta{
+        padding: 20px;
+        margin-top: 5%;
+        ul li{
+            list-style: none;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+    }
+    .NomeConta{
+        width: 100%;
+        padding: 20px;
+        margin-top: 5%;
+        @include centraliza();
+        font-size: 20px;
+    }
+    &:hover{
+        box-shadow: 0px 0px 20px $primaria;
+    }
+}
