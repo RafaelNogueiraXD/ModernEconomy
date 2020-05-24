@@ -21,11 +21,9 @@
     }
     echo "<script>
             var cor =".$usu['cor']." 
-         </script>";
-    echo "<script>
+            var conta =".$_SESSION['conta']." 
             var idu =".$usu['id']." 
          </script>";
-
 ?>
 <body>
     <header class="h">
@@ -72,21 +70,21 @@
                         <p class="option">Perfil</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="iconehide">
                     <div>
-                        <p class="icone">I</p>
+                        <p class="icone" >I</p>
                         <p class="option">Gráficos</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="iconehide">
                     <div>
-                        <p class="icone">I</p>
+                        <p class="icone" >I</p>
                         <p class="option">Listas</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="iconehide">
                     <div>
-                        <p class="icone">I</p>
+                        <p class="icone" >I</p>
                         <p class="option">Objetivos</p>
                     </div>
                 </a>
@@ -114,6 +112,7 @@
 <script src="../../js/cores.js"></script>
 <script src="../../js/main.js"></script>
 <script>
+
 </script>
 </body>
 </html>

@@ -33,7 +33,7 @@
                     </div>
                     <div class="descConta">
                         <ul>   
-                            <li><b>Nome:</b> Conta Principal</li>
+                            <li><b>Tipo:</b> <?= $ContaPrincipal['tipo'] ?></li>
                             <li><b>Listas:</b>  <?= $num['listas'] ?> Listas</li>
                             <li><b>Objetivos:</b> <?= $num['objetivos'] ?> Objetivo</li>
                         </ul>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="descConta">
                         <ul>   
-                            <li><b>Nome:</b> <?= $linha["Nome"] ?>  </li>
+                            <li><b>Tipo:</b>  <?= $linha['tipo'] ?> </li>
                             <li><b>Listas:</b> <?= $num['listas'] ?>  Listas</li>
                             <li><b>Objetivos:</b>  <?= $num['objetivos'] ?> Objetivo</li>
                         </ul>

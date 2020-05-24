@@ -39,10 +39,6 @@ function ajaxcolor(color,idu){
     })
 }
 
-function titulo(head,url){
-    $("#title").html(head);
-    $("#urlt").html(url);
-}
 //night mode 
 function dark(){
     $("header.v").css("background-color","#262626"),

@@ -16,13 +16,14 @@
                 $id = $row['id'];
                 $_SESSION['id'] = $id;
                 $_SESSION['email'] = $row['email'];
+                $_SESSION['conta'] = 0;
                 
                 $query = $conta->Contax($id);
                 $row = $query->rowCount();
                 $ar = $query->fetch(PDO::FETCH_ASSOC);
                 if($row > 0)
                 {
-                    header("Location: perfil.php");
+                    header("Location: ../conta/TelaInicial.php");
 
                 }else{
                     header("Location: ../conta/config.php");
