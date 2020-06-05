@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../templates/icone.png">
     <link rel="stylesheet" href="../../style/style.css">
     <script src="../../js/jquery.js"></script>
     <title id="title">Document</title>
@@ -29,7 +30,7 @@
     <header class="h">
         <div class="slogan">
             <div>
-                <h1>SLOGAN</h1>
+                <!-- <img src="../templates/icone.png" alt="Slogan"> -->
             </div>
 
         </div>
@@ -54,8 +55,11 @@
     </header>
     <div class="full">
         <header class="v">
-                <div class="slogan">
-                    <h1>SLOGAN</h1>
+            <div class="slogan">
+             
+                    <img src="../../style/img/slogan.png" alt="Slogan" width="60%">
+       
+
             </div>
             <div class="lista">
                 <a href="../conta/TelaInicial.php">

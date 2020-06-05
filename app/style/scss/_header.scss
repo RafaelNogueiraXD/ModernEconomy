@@ -53,6 +53,7 @@ header.v{
     width: 12%;
     height: 100vh;
     .slogan{
+        padding-top: 10%;
         height: 130px;
         @include centraliza();
     }

@@ -19,6 +19,7 @@
   border: 1px solid #ff4700ff;
   border-radius: 10px;
   color: #ff4700ff;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -148,6 +149,181 @@ table tr:hover {
   display: block;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal .conteudoModal {
+  margin-left: 30%;
+  width: 50%;
+  height: 60vh;
+  background: white;
+  position: fixed;
+  border-radius: 20px;
+}
+
+.modal .conteudoModal .inicioModal {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 9fr 1fr;
+      grid-template-columns: 9fr 1fr;
+}
+
+.modal .conteudoModal .inicioModal div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5%;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .conteudoModal .inicioModal div button {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.modal .conteudoModal .inicioModal div button:hover {
+  color: red;
+}
+
+.modal .conteudoModal .inicioModal div button:focus {
+  outline: none;
+}
+
+.modal .conteudoModal .meioModal {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.modal .conteudoModal .meioModal div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5%;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.modal .conteudoModal .meioModal div:hover label {
+  font-size: 25px;
+}
+
+.modal .conteudoModal .meioModal div:hover input {
+  font-size: 18px;
+}
+
+.modal .conteudoModal .meioModal div:focus label {
+  font-size: 25px;
+}
+
+.modal .conteudoModal .meioModal div:focus input {
+  font-size: 18px;
+}
+
+.modal .conteudoModal .meioModal div label {
+  font-size: 20px;
+  margin-left: 25%;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.modal .conteudoModal .meioModal div input {
+  width: 40%;
+  background: none;
+  height: 4%;
+  padding: 5px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  font-size: 15px;
+}
+
+.modal .conteudoModal .meioModal div input:hover {
+  height: 40px;
+  font-size: 18px;
+}
+
+.modal .conteudoModal .meioModal div input:focus {
+  outline: none;
+  font-size: 18px;
+}
+
+.modal .conteudoModal .meioModal div input:focus .meioModal div label {
+  font-size: 25px;
+}
+
+.modal .conteudoModal .meioModal div textarea {
+  padding: 10px;
+  margin: 10px;
+}
+
+.modal .conteudoModal .botoes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.modal .conteudoModal .botoes div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5%;
+}
+
+.modal .conteudoModal .botoes div input[type=submit] {
+  background: #06dd06;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  color: white;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.modal .conteudoModal .botoes div input[type=submit]:hover {
+  background-color: green;
+}
+
+#msg {
+  padding: 10px;
+  background: rgba(255, 0, 0, 0.233);
+  border: 2px solid red;
+  color: white;
+  display: block;
+  height: 60%;
+  border-radius: 10px;
+}
+
 header {
   position: fixed;
 }
@@ -238,6 +414,7 @@ header.v {
 }
 
 header.v .slogan {
+  padding-top: 10%;
   height: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -676,6 +853,16 @@ div.options div a {
   width: 100%;
   background: transparent;
   height: 10vh;
+}
+
+.linhaME {
+  content: '';
+  margin: 0;
+  width: 60%;
+  margin-left: 20%;
+  height: 2px;
+  background: #ff4700ff;
+  display: block;
 }
 
 @media screen and (max-width: 1700px) {

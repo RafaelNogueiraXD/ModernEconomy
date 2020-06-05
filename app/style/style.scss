@@ -114,6 +114,15 @@ div.options{
     background: transparent;
     height: 10vh;
 }
+.linhaME{
+    content: '';
+    margin: 0;
+    width: 60%;
+    margin-left: 20%;
+    height: 2px;
+    background: #ff4700ff;
+    display: block;
+}
 @media screen and (max-width: 1700px) {
     .dados{
         width: 130ch;
