@@ -400,9 +400,11 @@ header.h #mode button:focus {
 
 header.h #mode #dark {
   background-color: #1a001a;
+  cursor: pointer;
 }
 
 header.h #mode #light {
+  cursor: pointer;
   background-color: #ff4700ff;
   color: white;
 }

@@ -41,8 +41,10 @@ header.h{
             }
             #dark{
                 background-color: #1a001a;
+                cursor: pointer;
             }
             #light{
+                cursor: pointer;
                 background-color: $primaria;
                 color: white;
             }
@@ -75,7 +77,7 @@ header.v{
             }
             .option{
                 // margin-left: 10px;
-            color: white;
+                color: white;
                 flex: 6;
                 font-size: 20px;
             }

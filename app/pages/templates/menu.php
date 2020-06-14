@@ -45,8 +45,8 @@
                     <li><a href="#">Options</a>
                         <ul>
                             <li><a href="../usuario/perfil.php">Perfil</a></li>
-                            <li><a href="#" id="dark">Dark Mode (BETA)</a></li>
-                            <li><a href="#" id="light">Light Mode (BETA)</a></li>
+                            <li><a  id="dark">Dark Mode (BETA)</a></li>
+                            <li><a  id="light">Light Mode (BETA)</a></li>
                             <li><a href="../sair/sair.php">Sair</a></li>                                     
                         </ul>
                     </li>     

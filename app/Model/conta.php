@@ -40,8 +40,9 @@ class conta extends crud{
     }
 
 
-    public function insere($dado1,$dado2,$dado3){
-        $a = crud::insert("conta","default,'$dado1','$dado2','0','','0','$dado3','Não informado'",array());
+    public function insere($dado1,$dado2,$dado3,$usuario){
+        $data = date('y-m-d');
+        $a = crud::insert("conta","default,'$dado1','$dado2','$dado3','$data','$usuario'",array());
         return $a;
     }
 }

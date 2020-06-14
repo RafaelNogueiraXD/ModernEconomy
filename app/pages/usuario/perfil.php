@@ -76,6 +76,12 @@ if(isset($_POST['nome']))
                 <span class="linhaME"></span>
 
                 <div id="campoP">
+                    <label for="Senha">Senha: </label>
+                    <input type="text" name="senha" placeholder="Digite sua senha" id="senha" value="<?=  $usu['password'] ?>">
+                </div>
+                <span class="linhaME"></span>
+
+                <div id="campoP">
                     <label for="Nome">Email: </label>
                     <input type="email" name="email" placeholder="Digite seu nome" id="nome" value="<?=   $usu['email'] ?>">
                 </div>

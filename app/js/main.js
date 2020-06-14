@@ -18,12 +18,7 @@ function titulo(head,url){
 //Modal
     function Modal(){
         $("#abreModal").click(() => {
-            setTimeout(() => {
-                $(".modal").css("display","block");
-                $(".conteudoModal").animate({
-                    marginTop: "+10%"
-                },700,function(){})
-            }, 100);
+            abreModal();
         });
         $("#fechaModal").click(() => {
             $(".conteudoModal").animate({
@@ -33,4 +28,16 @@ function titulo(head,url){
                 $(".modal").css("display","none");
             }, 500);
         });
+        $("#abreModal2").click(() => {
+            abreModal();
+        });
     }
+
+function abreModal(){
+    setTimeout(() => {
+        $(".modal").css("display","block");
+        $(".conteudoModal").animate({
+            marginTop: "+10%"
+        },700,function(){})
+    }, 100);
+}

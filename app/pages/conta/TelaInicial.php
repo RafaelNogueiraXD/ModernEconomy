@@ -6,6 +6,12 @@
     $num = $conta->Nums($ContaPrincipal['id']);
     $contas = $conta->Contax($usu['id']);
 
+    if(isset($_POST['nome']))
+    {
+        $conta->insere($_POST['nome'],$_POST['tipo'],$_POST['saldo'],$usu['id']);
+        header("Location: TelaInicial.php");
+    }
+
 ?>
 
 <div class="full">
@@ -22,7 +28,7 @@
                <div class="filtros">
                </div>
                <div class="add">
-                        <a href="" class="btn-efect">Adicionar</a>
+                        <a id="abreModal" class="btn-efect" style="cursor:pointer">Adicionar</a>
                </div>
             </div>
             <div class="cc2">
@@ -78,7 +84,7 @@
                         <h1>Criar conta!</h1>
                     </div>
                     <div class="entraConta">
-                        <a href="" class="btn">Criar!</a>
+                        <a id="abreModal2" style="cursor:pointer" class="btn">Criar!</a>
                     </div>
                 </div>
                 
@@ -87,11 +93,56 @@
             </div>
         </div>
     </div>
+
+    <div class="modal">
+        <div class="conteudoModal">
+            <div class="inicioModal">
+                    <div>
+                        <h1>Adicionar uma Conta</h1>
+                    </div>
+                    <div>
+                        <button id="fechaModal">X</button>
+                    </div>
+            </div>
+                <form action="TelaInicial.php" method="POST">
+            <div class="meioModal">
+                
+                <div id="campoP">
+                    <label for="Nome">Nome: </label>
+                    <input type="text" name="nome" placeholder="Digite o nome da conta" id="nome">
+                </div>
+                <span class="linhaME"></span>
+                
+                <div id="campoP">
+                    <label for="Tipo">Tipo: </label>
+                    <input type="text" name="tipo" placeholder="Digite seu tipo" id="tipo">
+                </div>
+                <span class="linhaME"></span>
+                
+                 <div id="campoP">
+                    <label for="Saldo">Saldo: </label>
+                    <input type="text" name="saldo" placeholder="Digite o saldo" id="saldo">
+                </div>
+                <span class="linhaME"></span>
+            </div>
+                <div class="botoes">
+                    <div>
+                        <input type="submit" value="Adicionar">
+                    </div>
+                </div>
+                </form>
+                
+        </div>
+    </div>
+
+
 </section>
 
 </div>
 
 <script>
+    Modal(); 
+
     titulo("Página Inicial","Página Inicial");
 </script>
 
