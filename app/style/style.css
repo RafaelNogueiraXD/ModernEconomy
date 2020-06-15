@@ -58,7 +58,7 @@
 .tmodern {
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: #ff4700ff;
-  color: #aba4ad;
+  color: transparent;
 }
 
 table {
@@ -717,6 +717,103 @@ header.v .lista div:hover .icone {
 .formcon:hover {
   background-color: #ff4700ff;
   color: white;
+}
+
+.contax {
+  border: 1px solid #ff4700ff;
+  display: -ms-grid;
+  display: grid;
+  padding: 20px;
+  border-radius: 15px;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  width: 140%;
+  min-height: 65vh;
+  padding: 7%;
+  padding-top: 9%;
+}
+
+.contax div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+}
+
+.contax div fieldset {
+  border-radius: 10px;
+  border: 0.5px solid #ff4700ff;
+  padding: 10px;
+}
+
+.contax div fieldset legend {
+  margin-left: 10px;
+  font-size: 30px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ff4700ff;
+  color: transparent;
+}
+
+.contax div a {
+  margin-left: 30px;
+  width: 150px;
+}
+
+.contax div .Numrecados {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contax .recadox {
+  border: 1px solid #ff4700ff;
+  border-radius: 15px;
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #faeb553b;
+}
+
+.contax .recadox p {
+  width: 80%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.contax .recadox a {
+  width: 20%;
+  text-decoration: none;
+}
+
+.contax .recadox a:hover {
+  color: red;
+}
+
+.contax .linhaME {
+  width: 100%;
+  margin-top: 10%;
+  margin-left: 0;
+}
+
+.contax h1 {
+  font-size: 45px;
 }
 
 body {

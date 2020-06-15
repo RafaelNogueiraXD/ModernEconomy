@@ -4,7 +4,14 @@
     $conta = new conta();
     $ContaPrincipal = $conta->ContaPrincipal($usu['id'])->fetch(PDO::FETCH_ASSOC);
     $num = $conta->Nums($ContaPrincipal['id']);
-    $contas = $conta->Contax($usu['id']);
+    $contas = $conta->Contasx($usu['id']);
+    
+    if($_SESSION['conta'] > 0 ){
+        $_SESSION['conta'] = 0;
+        header("Location: TelaInicial.php");
+    }
+
+
 
     if(isset($_POST['nome']))
     {
@@ -45,7 +52,7 @@
                         </ul>
                     </div>
                     <div class="entraConta">
-                        <a href="" class="btn">Entrar!</a>
+                        <a href="conta.php?id=<?= $ContaPrincipal['id'] ?>" class="btn">Entrar!</a>
                     </div>
                 </div>
 
@@ -69,7 +76,7 @@
                         </ul>
                     </div>
                     <div class="entraConta">
-                        <a href="" class="btn">Entrar!</a>
+                        <a href="conta.php?id=<?= $linha['id'] ?>" class="btn">Entrar!</a>
                     </div>
                 </div>
 

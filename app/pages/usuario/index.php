@@ -18,7 +18,7 @@
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['conta'] = 0;
                 
-                $query = $conta->Contax($id);
+                $query = $conta->Contax($id,$row['id']);
                 $row = $query->rowCount();
                 $ar = $query->fetch(PDO::FETCH_ASSOC);
                 if($row > 0)

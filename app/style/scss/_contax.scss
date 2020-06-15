@@ -1,0 +1,63 @@
+.contax{
+    border: 1px solid #ff4700ff;
+    display: grid;
+    padding: 20px;
+    border-radius: 15px;
+    grid-template-columns: 100%;
+    width: 140%;
+    min-height: 65vh;
+    padding: 7%;
+    padding-top: 9%;
+    div{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        fieldset{
+            legend{
+                margin-left: 10px;
+                font-size: 30px;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: $primaria;
+                color: transparent;
+            }
+            border-radius: 10px;
+            border: 0.5px solid $primaria;
+            padding: 10px;
+        }
+        a{
+            margin-left: 30px;
+            width: 150px;
+        }
+        .Numrecados{
+            display: flex;
+            @include centraliza();
+        }
+     
+    }
+    .recadox{
+        border: 1px solid $primaria;
+        border-radius: 15px;
+        height: 5vh;
+        display: flex;
+        @include centraliza();
+        background: #faeb553b;
+        p{width: 80%;
+        text-align: left;
+        margin-left: 20px;}
+        a{
+            width: 20%;
+            text-decoration: none;
+            &:hover{
+                color: red;
+            }
+        }
+    }
+    
+    .linhaME{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+    h1{
+        font-size: 45px;
+    }
+}

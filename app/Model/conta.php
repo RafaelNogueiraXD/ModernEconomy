@@ -18,8 +18,13 @@ class conta extends crud{
         return $result;
     }
 
-    public function Contax($id){
+    public function Contasx($id){
         $result = crud::select("*","conta"," WHERE criador=$id",array());                                             
+        return $result;
+    }
+
+    public function Contax($id,$idconta){
+        $result = crud::select("*","conta"," WHERE criador=$id and id=$idconta",array());                                             
         return $result;
     }
 
